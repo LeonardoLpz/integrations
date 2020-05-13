@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Icons/48px/Movement/Category/Gas@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="24" cy="24" r="24"></circle>
+    </defs>
+    <g id="Icons/48px/Movement/Category/Gas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+            <use fill-opacity="0.08" fill="#37C977" xlink:href="#path-1"></use>
+        </g>
+        <g id="Icons/32px/More/Services/Gas" transform="translate(8.000000, 8.000000)" fill="#37C977" fill-rule="nonzero">
+            <path d="M14.0015628,4 C14.2071112,4 14.398297,4.06234686 14.5572126,4.16925496 C15.416879,4.69763281 26.0015628,11.3666674 26.0015628,20.0007814 C26.0015628,25.5226564 21.5226564,28 16.0007814,28 L16.0007814,28 L16.2005108,27.9951053 C18.3178162,27.891092 20.0015628,26.1424006 20.0015628,23.9992186 C20.0015628,18.2545377 17.2514496,15.2599701 17.0173974,15.0155156 L17.0015628,14.9992186 C17.0015628,14.9992186 17.0015628,22 15,22 C14.0015628,22 13.0007814,20.0007814 13.0007814,20.0007814 C13.0007814,20.0007814 12,22 12,23.9992186 C12,26.209375 13.790625,28 16.0007814,28 L16.0007814,28 L15.711138,27.9977095 C10.3231303,27.9121386 6,25.4257814 6,20.0007814 C6,13.0257814 13.0007814,9.34375 13.0007814,5.0007814 L13.0007814,5.0007814 L13.0075086,4.88399363 C13.0652704,4.38598945 13.4879467,4 14.0015628,4 Z" id="Path-2"></path>
+        </g>
+    </g>
+</svg>

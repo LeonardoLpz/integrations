@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "marketplaceIntegrations"
+    }
+  },
+  "defaultProject": "marketplaceIntegrations",
+  "schematics": {
+    "@schematics/angular:component": {
+      "spec": false
+    }
+  },
+  "cli": {
+    "analytics": "abd19577-8042-48e5-afbf-ee4b87278c09"
+  }
 }

@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+@font-face {
+  font-family: "AvertaStdPE-Regular";
+  src: url("assets/arcus/fonts/IntelligentDesign-AvertaStdPE-Regular.woff");
+}
+@font-face {
+  font-family: "AvertaStdPE-Bold";
+  src: url("assets/arcus/fonts/IntelligentDesign-AvertaStdPE-Bold.woff");
+}
+@font-face {
+  font-family: "AvertaStdPE-Semibold";
+  src: url("assets/arcus/fonts/IntelligentDesign-AvertaStdPE-Semibold.woff");
+
+}
+@font-face{
+  font-family: AvertaStdPE;
+  font-weight: normal;
+  src: url("assets/arcus/fonts/IntelligentDesign-AvertaStdPE-Regular.woff")
+}
+@font-face{
+  font-family: AvertaStdPE;
+  font-weight: bold;
+  src: url("assets/arcus/fonts/IntelligentDesign-AvertaStdPE-Semibold.woff");
+}
+.backdropBackground {
+  background: #6a727e;//rgba(43, 54, 71, .7) !important;//rgba(0,0,0,.32);
+}

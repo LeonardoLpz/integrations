@@ -1,0 +1,39 @@
+
+<mat-dialog-content class="text-center">
+  <!--<mat-icon>{{ icon }}</mat-icon><br>
+  <div [innerHTML]="txtContent"></div>-->
+  <ng-container *ngIf="type == 'confirm'">
+    <div class="overlay__content">
+      <img src="assets/arcus/confirmar.png" class="overlay__image overlay__image--realizado">
+      <p class="overlay__message overlay__message--realizado">
+        Pago a <strong>{{billerName}}</strong> de {{amount | currency}}
+      </p>
+      <button class="overlay__button overlay__button--confirmar" (click)="onCloseConfirm()">Confirmar</button>
+      <button class="overlay__button overlay__button--cerrar" (click)="onCloseCancel()">Ahora no</button></div>
+  </ng-container>
+
+  <ng-container *ngIf="type == 'error'">
+    <div class="overlay__content" style="padding-top: 30px;">
+      <img src="assets/arcus/error.png" class="overlay__image overlay__image--realizado">
+      <p class="overlay__title overlay__title--error">Error en la solicitud</p>
+      <p class="overlay__message overlay__message--realizado">
+        {{error}}
+      </p>
+      <button class="overlay__button overlay__button--cerrar" (click)="onCloseConfirm()" *ngIf="!isToken">Cerrar</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="type == 'success'">
+    <div class="overlay__content" style="padding-top: 30px;">
+      <img src="assets/arcus/realizado.png" class="overlay__image overlay__image--realizado">
+      <p class="overlay__title overlay__title--error">Pago realizado</p>
+      <p class="overlay__message overlay__message--realizado" [innerHTML]="msg">
+      </p>
+      <button class="overlay__button overlay__button--cerrar" (click)="onCloseConfirm()" >Cerrar</button>
+    </div>
+  </ng-container>
+
+
+
+
+</mat-dialog-content>

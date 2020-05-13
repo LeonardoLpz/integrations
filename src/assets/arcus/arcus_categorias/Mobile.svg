@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Icons/48px/Movement/Category/Mobile@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="24" cy="24" r="24"></circle>
+    </defs>
+    <g id="Icons/48px/Movement/Category/Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+            <use fill-opacity="0.08" fill="#37C977" xlink:href="#path-1"></use>
+        </g>
+        <g id="Icons/32px/More/Services/Mobile" transform="translate(8.000000, 8.000000)" fill="#37C977" fill-rule="nonzero">
+            <path d="M22,3 L10.8571429,3 C9.83107143,3 9,3.83107143 9,4.85714286 L9,27.1428571 C9,28.1689286 9.83107143,29 10.8571429,29 L22,29 C23.0260714,29 23.8571429,28.1689286 23.8571429,27.1428571 L23.8571429,4.85714286 C23.8571429,3.83107143 23.0260714,3 22,3 Z M16.4285714,27.1428571 C15.916,27.1428571 15.5,26.7268571 15.5,26.2142857 C15.5,25.7017143 15.916,25.2857143 16.4285714,25.2857143 C16.9411429,25.2857143 17.3571429,25.7017143 17.3571429,26.2142857 C17.3571429,26.7268571 16.9411429,27.1428571 16.4285714,27.1428571 Z M22,24.3571429 L10.8571429,24.3571429 L10.8571429,5.78571429 L22,5.78571429 L22,24.3571429 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,334 @@
+
+p{
+  margin: 0px;
+}
+
+.description{
+  display: grid;
+  max-width: 480px;
+
+}
+.description-main{
+  display: grid;
+  grid-template-rows: auto 105px;
+  height: 280px;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 480px;
+  box-shadow: inset 0 -1px 0 0 #ebebeb;
+  background-color:white ;
+
+
+}
+.description-image {
+  height: 120px;
+  width: calc(100vw - 32px);
+  align-self: end;
+  max-width: 480px;
+  box-sizing: border-box;
+  justify-self: center;
+  padding: 0px 16px;
+}
+.description-text{
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  align-self: center;
+
+  width: calc(100vw - 32px);
+  max-width: 420px;
+  font-family: AvertaStdPE;
+  font-weight: normal;
+  text-align: center;
+  color: #868d9f;
+}
+.description-subtitle{
+  font-size: 16px;
+  font-family: AvertaStdPE;
+  font-weight: normal;
+  color: #868d9f;
+  max-width: 480px;
+  height: 72px;
+  background-color: #f6f7f8;
+  box-sizing: border-box;
+  padding: 38px 0px 12px 16px;
+  align-self: end;
+  box-shadow: inset 0 -1px 0 0 #ebebeb;
+}
+.description-item{
+  display: grid;
+  grid-row-gap: 24px;
+  padding: 16px;
+  box-shadow: inset 0 -1px 0 0 #ebebeb;
+  max-width: 450px;
+}
+.item{
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 16px;
+  box-sizing: border-box;
+  height: 44px;
+  max-width: 480px;
+
+}
+.item-image{
+  height: 32px;
+  width: 32px;
+}
+.item-text{
+  max-width: 480px;
+  font-family: AvertaStdPE;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #2b3647;
+}
+.description-question{
+  box-shadow: inset 0 -1px 0 0 #ebebeb;
+  box-sizing: border-box;
+  display: grid;
+
+}
+.question{
+  border-bottom:#e8ebf1 solid 1px ;
+  display: grid;
+  grid-auto-flow: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  max-width: 480px;
+  box-sizing: border-box;
+
+}
+.question-text{
+
+  align-self: center;
+  box-sizing: border-box;
+}
+.question-img{
+
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  justify-self: end;
+}
+.spacer{
+  height: 64px;
+  background-color: #f6f7f8;
+  box-shadow: inset 0 -1px 0 0 #ebebeb;
+  max-width: 480px;
+}
+.btn-section{
+  display: grid;
+  grid-template-columns: 24px auto;
+  grid-column-gap: 14px;
+  height: 128px;
+  box-shadow: inset 0 -1px 0 0 #e8ebf1;
+  padding-left: 16px;
+  padding-top: 17px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+
+}
+.label-terms{
+  align-self: center;
+  display: grid;
+  grid-auto-flow: column;
+
+
+
+}
+.checkbox{
+  height: 24px;
+  width: 24px;
+  background-image: url("src/assets/doctors/check-cuadrado-off@3x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.terms{
+  display: none;
+
+}
+.terms:checked + .checkbox{
+  background-image: url("src/assets/doctors/check-cuadrado-on@3x.png");
+}
+.terms-text{
+  grid-column: 2;
+  align-self: center;
+  font-family: AvertaStdPE;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #2b3647;
+}
+#termsConditions{
+  color:#ff0068 ;
+}
+.btn-inactive{
+  grid-column: 1/3;
+  align-self: end;
+  height: 56px;
+  width:calc(100vw - 32px);
+  max-width: 450px;
+  border-radius: 8px;
+  background-color: #ff99c3;
+  padding-top: 16px;
+  opacity: 0.8;
+  font-family: AvertaStdPE;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.btn-active{
+  grid-column: 1/3;
+  align-self: end;
+  height: 56px;
+  width:calc(100vw - 32px);
+  max-width: 450px;
+  border-radius: 8px;
+  background-color: #ff0068;
+  padding-top: 16px;
+  opacity: 0.8;
+  font-family: AvertaStdPE;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.intercom-lightweight-app-launcher{
+  top:16px;
+  right: 16px;
+}
+.checkout{
+  display: grid;
+  grid-template-rows: auto 72px auto;
+  min-height: 100vh;
+  max-width: 480px;
+}
+.price{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: end;
+  height: 50px;
+}
+.price-amount{
+  justify-self: right;
+  width: 71px;
+  height: 49px;
+  font-family: AvertaStdPE;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2b3647;
+
+}
+.checkout span{
+  align-self: end;
+  width: 52px;
+  height: 22px;
+  font-family: AvertaStdPE;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  color: #2b3647;
+  padding-bottom: 5px;
+}
+.detail-item{
+  display: grid;
+  height: 64px;
+  align-items: center;
+  grid-auto-flow: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  border-bottom: solid 1px #ebebeb;
+}
+.detail-title{
+  height: 22px;
+  font-family: AvertaStdPE;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #868d9f;
+}
+.detail-text{
+  height: 22px;
+  font-family: AvertaStdPE;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: right;
+  color: #2b3647;
+  justify-self: end;
+}
+.checkout-contratar{
+  height: 162px;
+  background-color: #f6f7f8;
+  box-shadow: inset 0 -1px 0 0 #e8ebf1;
+  display: grid;
+  box-sizing: border-box;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+}
+.btn-checkout{
+  background-color: #ff0068;
+}
+.answer-section{
+  display: none;
+}
+.quest{
+  height: 24px;
+  font-family: AvertaStdPE;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #2b3647;
+}
+.answer{
+  height: 110px;
+  font-family: AvertaStdPE;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #2b3647;
+}

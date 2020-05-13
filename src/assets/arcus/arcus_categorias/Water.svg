@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Icons/48px/Movement/Category/Water@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="24" cy="24" r="24"></circle>
+    </defs>
+    <g id="Icons/48px/Movement/Category/Water" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval">
+            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+            <use fill-opacity="0.08" fill="#37C977" xlink:href="#path-1"></use>
+        </g>
+        <g id="Icons/32px/More/Services/Water" transform="translate(8.000000, 8.000000)" fill="#37C977" fill-rule="nonzero">
+            <path d="M16,4.40559441 C16,4.40559441 8,14.1678322 8,19.5384615 C8,23.9895103 11.5798613,27.5944056 16,27.5944056 C20.4201387,27.5944056 24,23.9895103 24,19.5384615 C24,14.1678322 16,4.40559441 16,4.40559441 Z M12.5104169,20.0664338 C12.5104169,21.3426573 13.1041671,23.8706296 13.5173609,24.9230769 C10.8125004,23.587413 10.0972222,20.9615387 10.0972222,19.1398606 C10.0972222,16.2972026 13.375,12.1363639 15.2326391,8.26223799 C15.0277778,10.2972026 12.5104169,16.1993005 12.5104169,20.0664338 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

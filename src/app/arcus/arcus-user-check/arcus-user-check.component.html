@@ -1,0 +1,115 @@
+<ngx-loading [show]="load"></ngx-loading>
+
+<div *ngIf="!load && viewType == 'history'" class="layout listHistory" style="display: grid;">
+  <div class="historyNewPayment"  (click)="newPayment()">
+    <img class="historyNewPayment__image" src="assets/arcus/newPayment.png" alt="">
+    <p class="historyNewPayment__title">Realizar nuevo pago</p>
+  </div>
+
+  <div class="subHeader history__subtitle">
+    <p class="subheader__title">Últimos Pagos</p>
+  </div>
+
+  <div *ngFor="let hist of listHistory" class="history__company" (click)="detail(hist.id)">
+    <img class="history__image" src="{{hist.iconAng}}" alt="">
+    <p class="history__title">{{hist.biller}}</p>
+    <p class="history__name">{{hist.last}}</p>
+    <p class="history__amount">{{hist.amount | currency}}</p>
+  </div>
+</div>
+
+
+<div *ngIf="!load && viewType == 'historyDetail'" class="historyDetail layout" style="display: grid;">
+  <div class="historyDetail__header ">
+    <img src="{{infoDetail.iconAng}}" alt="" class="historyDetail__image">
+    <p class="historyDetail__amount">-{{infoDetail.amount | currency}}</p>
+    <p class="historyDetail__company">{{infoDetail.biller_name}}</p>
+  </div>
+  <div class="historyDetail__detail">
+    <p class="detail__title">Fecha</p>
+    <p class="detail__content">{{infoDetail.creation_date}}</p>
+  </div>
+  <div class="historyDetail__detail">
+    <p class="detail__title">Alias del servicio</p>
+    <p class="detail__content">{{infoDetail.alias}}</p>
+  </div>
+  <div class="historyDetail__detail">
+    <p class="detail__title">Referencia</p>
+    <p class="detail__content">{{infoDetail.account}}</p>
+  </div>
+  <div class="historyDetail__detail">
+    <p class="detail__title">Folio de alta</p>
+    <p class="detail__content">{{infoDetail.response_id}}</p>
+  </div>
+  <button class="bnext__button--back" (click)="historyBack()">Atrás</button>
+</div>
+
+
+<div *ngIf="!load && viewType == 'services'" class="layout" style="display: grid; grid-template-rows: repeat(7,66px);">
+  <div *ngFor="let serv of listServices" class="servicios__item" (click)="detailService(serv.id)">
+    <img class="servicios__img" src="{{serv.iconAng}}" alt="">
+    <p class="servicios__name">{{serv.title}}</p>
+  </div>
+
+  <button class="bnext__button--back" (click)="historyBack()" style="grid-row: inherit;" *ngIf="showBackServ">Atrás</button>
+</div>
+
+
+<div *ngIf="!load && viewType == 'serviceDetail'" class="layout list-billers" style="display: grid;">
+  <div class="subHeader"><p class="subheader__title">Escoge la compañía</p></div>
+
+  <div *ngFor="let item of infoServices.items" class="company" (click)="detailBiller(item.id)">
+    <img class="company__image" src="{{item.imageAng}}" alt="">
+    <p class="company__title">{{item.title}}</p><div class="company__go"></div>
+  </div>
+
+  <button class="bnext__button--back" (click)="gotoServices()" style="grid-row: inherit;" *ngIf="showBackServ">Atrás</button>
+</div>
+
+
+<div *ngIf="!load && viewType == 'itemsGift'" class="layout list-billers" style="display: grid;">
+  <div class="subHeader"><p class="subheader__title">Escoge la cantidad</p></div>
+
+  <div *ngFor="let item of infoServiceDetail.items" class="company" (click)="detailBiller(item.id, true)">
+    <img class="company__image" src="{{infoServiceDetail.imageAng}}" alt="">
+    <p class="company__title">{{item.name}}</p><div class="company__go"></div>
+  </div>
+
+  <button class="bnext__button--back" (click)="bqckToGift()" style="grid-row: inherit;">Atrás</button>
+</div>
+
+
+<div *ngIf="!load && viewType == 'servicePayment'" class="layout infoPayment" style="display: grid;">
+  <div class="header">
+    <p class="header__title">{{infoServiceDetail.title}}</p>
+    <img src="{{infoServiceDetail.imageAng}}" alt="" class="header__img">
+  </div>
+
+  <mat-form-field class="example-full-width mgb20">
+    <mat-label class="bnext__label" [ngClass]="{'colormsgError': showErrorNumber}">{{infoServiceDetail.request}}</mat-label>
+    <input type="tel" matInput placeholder="Ej. {{infoServiceDetail.mask}}" [(ngModel)]="data.account_number" (ngModelChange)="checkVal(1)">
+    <mat-hint class="introduce__info" [ngClass]="{'colormsgError': showErrorNumber}">{{infoServiceDetail.description}}</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="categorySelect === 1 || categorySelect === 5 || categorySelect === 7">
+    <mat-label class="bnext__label" [ngClass]="{'colormsgError': showErrorAmount}">Importe</mat-label>
+    <select matNativeControl [(ngModel)]="data.amount" (change)="checkVal(2)">
+      <option *ngFor="let item of infoServiceDetail.items" [value]="item">{{item}}</option>
+    </select>
+    <mat-hint class="introduce__info colormsgError" *ngIf="showErrorAmount">Seleccionar monto</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" *ngIf="showTxtAmount">
+    <mat-label class="bnext__label" [ngClass]="{'colormsgError': showErrorNumber}">Importe</mat-label>
+    <input type="number" matInput placeholder="Introduce el monto a pagar" [(ngModel)]="data.amount" [disabled]="this.infoServiceDetail.check_balance">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label class="bnext__label" [ngClass]="{'colormsgError': showErrorAlias}">Alias del servicio</mat-label>
+    <input matInput placeholder="Ej. Recarga celular" [(ngModel)]="data.alias" (ngModelChange)="checkVal(3)" >
+    <mat-hint class="introduce__info" [ngClass]="{'colormsgError': showErrorAlias}">Nombre con el que se guardará el pago en el historial </mat-hint>
+  </mat-form-field>
+
+  <button class="bnext__button--back" (click)="backPayment()">Atrás</button>
+  <button class="bnext__button--next" (click)="sendPaid()">{{txtButtonServPay}}</button>
+</div>

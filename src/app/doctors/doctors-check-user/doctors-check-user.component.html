@@ -1,0 +1,110 @@
+
+<div class="description" *ngIf="div == 'init'">
+  <div class="description-main">
+    <img src="assets/doctors/chat-salud.png" alt="chat salud image" class="description-image">
+    <p class="description-text">Un chat médico disponible las 24h para que hables con cualquier especialista siempre que lo necesites.</p>
+  </div>
+
+  <p class="description-subtitle">Especialidades</p>
+  <div class="description-item">
+    <div class="item">
+      <img src="assets/doctors/advisor.svg" alt="" class="item-image">
+      <p class="item-text">Consulta tus dudas a médicos profesionales por chat las 24 h</p>
+    </div>
+    <div class="item">
+      <img src="assets/doctors/hurto-copy-13.svg" alt="" class="item-image">
+      <p class="item-text">Receta médica electrónica con validez en cualquier farmacia</p>
+    </div>
+    <div class="item">
+      <img src="assets/doctors/trainer.svg" alt="" class="item-image">
+      <p class="item-text">Entrenador personal y nutricionista sin coste adicional</p>
+    </div>
+    <div class="item">
+      <img src="assets/doctors/conditions.svg" alt="" class="item-image">
+      <p class="item-text">Historiales médicos para recibir una mejor asistencia</p>
+    </div>
+
+
+
+  </div>
+  <p class="description-subtitle">Preguntas Frecuentes</p>
+  <div class="description-question">
+    <div class="question" onclick="question(1)">
+      <p class="item-text question-text">¿Qué es Chat Salud?</p>
+      <img src="assets/doctors/grey.svg" class="question-img">
+    </div>
+    <div class="question" onclick="question(2)">
+      <p class="item-text question-text">¿De qué dispongo con este servicio?</p>
+      <img src="assets/doctors/grey.svg" class="question-img">
+    </div>
+    <div class="question" onclick="question(3)">
+      <p class="item-text question-text">¿Qué especialidades incluye?</p>
+      <img src="assets/doctors/grey.svg" class="question-img">
+    </div>
+    <div class="question" onclick="question(4)">
+      <p class="item-text question-text">¿Qué tengo que hacer para disfrutar de él?</p>
+      <img src="assets/doctors/grey.svg" class="question-img">
+    </div>
+
+
+
+
+  </div>
+  <div class="spacer"></div>
+  <div class="btn-section" >
+
+
+    <label class="label-terms">
+      <input type="checkbox" class="terms" id="terms" value="acepted" [(ngModel)]="checkTerm">
+      <span class="checkbox"></span>
+    </label>
+    <p class="terms-text">Acepto los <span id="termsConditions">Términos y condiciones</span></p>
+
+    <div class="btn-inactive" id="btn" [ngClass]="{'btn-active':checkTerm}" (click)="prueba()">Me interesa</div>
+
+  </div>
+  <div class="answer-section">
+
+  </div>
+
+
+
+</div>
+<div class="checkout" *ngIf="div == 'muestralos'">
+  <div class="description-main">
+    <img src="./chat-salud.png" alt="chat salud image" class="description-image">
+    <div class="price">
+      <p class="price-amount">$50</p>
+      <span>/ mes</span>
+    </div>
+  </div>
+  <p class="description-subtitle">Detalles</p>
+  <div class="detail">
+    <div class="detail-item">
+      <p class="detail-title">Suscripción</p>
+      <p class="detail-text">Mensual</p>
+    </div>
+    <div class="detail-item">
+      <p class="detail-title">Fecha de alta</p>
+      <p class="detail-text">25/00/2024</p>
+    </div>
+    <div class="checkout-contratar">
+      <div class="btn-inactive btn-checkout">Contratar</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<script src="scripts.js"></script>
+<script>
+  window.intercomSettings = {
+    app_id: "gzookyv7"
+  };
+</script>
+<script>
+  // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/gzookyv7'
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/gzookyv7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+-->
